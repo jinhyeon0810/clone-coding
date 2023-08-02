@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Header.module.css";
-import { useDarkMode } from "../Context/DarkModeContext";
-import { HiMoon, HiSun } from "react-icons/hi";
 
-export default function Header({ filter, filters, setFilter, item }) {
+export default function Header({ filter, setFilter, item }) {
   const onClickFilter = () => {
     setFilter(item);
   };
@@ -15,10 +13,7 @@ export default function Header({ filter, filters, setFilter, item }) {
     <>
       <header>
         <li>
-          <button
-            onClick={() => onClickFilter(item)}
-            className={`${styles.filter} ${filter === item && styles.selected}`}
-          >
+          <button onClick={() => onClickFilter(item)} className={`${styles.filter} ${filter === item && styles.selected}`}>
             {item}
           </button>
         </li>

@@ -1,11 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
 import TodoList from "./components/TodoList/TodoList";
 import Header from "./components/Header/Header";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import styles from "./components/Header/Header.module.css";
-import { DarkModeProvider, useDarkMode } from "./components/Context/DarkModeContext";
-import { HiMoon, HiSun } from "react-icons/hi";
+import { DarkModeProvider } from "./components/Context/DarkModeContext";
 
 function App() {
   const filters = ["all", "start", "finish"];
